@@ -3,9 +3,9 @@ import Link from "next/link"
 
 // This would typically come from an API call
 const campaigns = [
-  { id: 1, title: "Summer Fashion Campaign", brand: "FashionCo", budget: "$5000" },
-  { id: 2, title: "Fitness App Promotion", brand: "FitLife", budget: "$3000" },
-  { id: 3, title: "New Smartphone Launch", brand: "TechGiant", budget: "$10000" },
+  { id: 1, title: "'Summer Fashion Campaign'", brand: "'FashionCo'", budget: "'$5000'" },
+  { id: 2, title: "'Fitness App Promotion'", brand: "'FitLife'", budget: "'$3000'" },
+  { id: 3, title: "'New Smartphone Launch'", brand: "'TechGiant'", budget: "'$10000'" },
 ]
 
 export default function Campaigns() {
