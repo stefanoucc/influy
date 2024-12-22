@@ -1,7 +1,7 @@
-"'use client'"
+"use client"
 
-import { useState } from "'react'"
-import Layout from "'../../components/layout'"
+import { useState } from "react"
+import Layout from "../../components/layout"
 
 export default function CreateCampaign() {
   const [formData, setFormData] = useState({
