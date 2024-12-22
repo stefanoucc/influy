@@ -5,12 +5,12 @@ import Layout from "../../components/layout"
 
 export default function InfluencerSignup() {
   const [formData, setFormData] = useState({
-    name: "''",
-    email: "''",
-    password: "''",
-    instagram: "''",
-    tiktok: "''",
-    youtube: "''",
+    name: "",
+    email: "",
+    password: "",
+    instagram: "",
+    tiktok: "",
+    youtube: "",
   })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

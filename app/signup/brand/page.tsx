@@ -5,11 +5,11 @@ import Layout from "../../components/layout"
 
 export default function BrandSignup() {
   const [formData, setFormData] = useState({
-    companyName: "''",
-    email: "''",
-    password: "''",
-    website: "''",
-    industry: "''",
+    companyName: "",
+    email: "",
+    password: "",
+    website: "",
+    industry: "",
   })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

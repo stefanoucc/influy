@@ -5,16 +5,16 @@ import Layout from "../components/layout"
 
 // This would typically come from an API call
 const influencers = [
-  { id: 1, name: "'John Doe'", category: "'Fashion'", followers: 100000, location: "'New York'" },
-  { id: 2, name: "'Jane Smith'", category: "'Fitness'", followers: 500000, location: "'Los Angeles'" },
-  { id: 3, name: "'Mike Johnson'", category: "'Tech'", followers: 250000, location: "'San Francisco'" },
+  { id: 1, name: "John Doe", category: "Fashion", followers: 100000, location: "New York" },
+  { id: 2, name: "Jane Smith", category: "Fitness", followers: 500000, location: "Los Angeles" },
+  { id: 3, name: "Mike Johnson", category: "Tech", followers: 250000, location: "San Francisco" },
 ]
 
 export default function Search() {
   const [filters, setFilters] = useState({
-    category: "''",
-    minFollowers: "''",
-    location: "''",
+    category: "",
+    minFollowers: "",
+    location: "",
   })
 
   const handleFilterChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -23,9 +23,9 @@ export default function Search() {
 
   const filteredInfluencers = influencers.filter((influencer) => {
     return (
-      (filters.category === "''" || influencer.category === filters.category) &&
-      (filters.minFollowers === "''" || influencer.followers >= parseInt(filters.minFollowers)) &&
-      (filters.location === "''" || influencer.location === filters.location)
+      (filters.category === "" || influencer.category === filters.category) &&
+      (filters.minFollowers === "" || influencer.followers >= parseInt(filters.minFollowers)) &&
+      (filters.location === "" || influencer.location === filters.location)
     )
   })
 
