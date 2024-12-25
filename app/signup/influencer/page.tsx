@@ -1,16 +1,16 @@
-"use client"
+'use client'
 
 import { useState } from "react"
 import Layout from "../../components/layout"
 
-export default function InfluencerSignup() {
+export default function CreatorSignup() {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    password: "",
-    instagram: "",
-    tiktok: "",
-    youtube: "",
+    name: "''",
+    email: "''",
+    password: "''",
+    instagram: "''",
+    tiktok: "''",
+    youtube: "''",
   })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -27,10 +27,10 @@ export default function InfluencerSignup() {
     <Layout>
       <div className="max-w-md mx-auto mt-10">
         <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-          <h2 className="text-2xl mb-6 text-center">Influencer Sign Up</h2>
+          <h2 className="text-2xl mb-6 text-center">Registro de Creador</h2>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
-              Name
+              Nombre
             </label>
             <input
               className="shadow appearance-none border border-gray-200 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline dark:border-gray-800"
@@ -58,7 +58,7 @@ export default function InfluencerSignup() {
           </div>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
-              Password
+              Contraseña
             </label>
             <input
               className="shadow appearance-none border border-gray-200 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline dark:border-gray-800"
@@ -72,7 +72,7 @@ export default function InfluencerSignup() {
           </div>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="instagram">
-              Instagram Handle
+              Usuario de Instagram
             </label>
             <input
               className="shadow appearance-none border border-gray-200 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline dark:border-gray-800"
@@ -85,7 +85,7 @@ export default function InfluencerSignup() {
           </div>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="tiktok">
-              TikTok Handle
+              Usuario de TikTok
             </label>
             <input
               className="shadow appearance-none border border-gray-200 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline dark:border-gray-800"
@@ -98,7 +98,7 @@ export default function InfluencerSignup() {
           </div>
           <div className="mb-6">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="youtube">
-              YouTube Channel
+              Canal de YouTube
             </label>
             <input
               className="shadow appearance-none border border-gray-200 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline dark:border-gray-800"
@@ -111,10 +111,10 @@ export default function InfluencerSignup() {
           </div>
           <div className="flex items-center justify-between">
             <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-pink-200 hover:bg-pink-300 text-pink-600 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit"
             >
-              Sign Up
+              Registrarse
             </button>
           </div>
         </form>

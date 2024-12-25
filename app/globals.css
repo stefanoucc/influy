@@ -3,11 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --color-pink: #FFC0CB;
+  --color-pastel-pink: #FFD1DC;
+  --color-pastel-blue: #AEC6CF;
+  --color-pastel-yellow: #FDFD96;
+  --color-pastel-green: #B0F2B6;
   --color-white: #FFFFFF;
   --color-black: #333333;
-  --color-cream: #FFFDD0;
-  --color-green: #98FB98;
 }
 
 body {

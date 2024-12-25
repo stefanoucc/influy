@@ -1,42 +1,42 @@
-"use client"
+'use client'
 
 import { useState } from "react"
 import Layout from "../components/layout"
 
 // This would typically come from an API call
-const influencers = [
-  { id: 1, name: "John Doe", category: "Fashion", followers: 100000, location: "New York" },
-  { id: 2, name: "Jane Smith", category: "Fitness", followers: 500000, location: "Los Angeles" },
-  { id: 3, name: "Mike Johnson", category: "Tech", followers: 250000, location: "San Francisco" },
+const creators = [
+  { id: 1, name: "'John Doe'", category: "'Moda'", followers: 100000, location: "'Nueva York'" },
+  { id: 2, name: "'Jane Smith'", category: "'Fitness'", followers: 500000, location: "'Los Ángeles'" },
+  { id: 3, name: "'Mike Johnson'", category: "'Tecnología'", followers: 250000, location: "'San Francisco'" },
 ]
 
 export default function Search() {
   const [filters, setFilters] = useState({
-    category: "",
-    minFollowers: "",
-    location: "",
+    category: "''",
+    minFollowers: "''",
+    location: "''",
   })
 
   const handleFilterChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFilters({ ...filters, [e.target.name]: e.target.value })
   }
 
-  const filteredInfluencers = influencers.filter((influencer) => {
+  const filteredCreators = creators.filter((creator) => {
     return (
-      (filters.category === "" || influencer.category === filters.category) &&
-      (filters.minFollowers === "" || influencer.followers >= parseInt(filters.minFollowers)) &&
-      (filters.location === "" || influencer.location === filters.location)
+      (filters.category === "''" || creator.category === filters.category) &&
+      (filters.minFollowers === "''" || creator.followers >= parseInt(filters.minFollowers)) &&
+      (filters.location === "''" || creator.location === filters.location)
     )
   })
 
   return (
     <Layout>
       <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">Search Influencers</h1>
+        <h1 className="text-3xl font-bold text-gray-900 mb-4">Buscar Creadores</h1>
         <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
           <div>
             <label htmlFor="category" className="block text-sm font-medium text-gray-700">
-              Category
+              Categoría
             </label>
             <select
               id="category"
@@ -45,15 +45,15 @@ export default function Search() {
               value={filters.category}
               onChange={handleFilterChange}
             >
-              <option value="">All Categories</option>
-              <option value="Fashion">Fashion</option>
+              <option value="">Todas las Categorías</option>
+              <option value="Moda">Moda</option>
               <option value="Fitness">Fitness</option>
-              <option value="Tech">Tech</option>
+              <option value="Tecnología">Tecnología</option>
             </select>
           </div>
           <div>
             <label htmlFor="minFollowers" className="block text-sm font-medium text-gray-700">
-              Minimum Followers
+              Seguidores Mínimos
             </label>
             <input
               type="number"
@@ -66,7 +66,7 @@ export default function Search() {
           </div>
           <div>
             <label htmlFor="location" className="block text-sm font-medium text-gray-700">
-              Location
+              Ubicación
             </label>
             <input
               type="text"
@@ -80,25 +80,25 @@ export default function Search() {
         </div>
         <div className="bg-white shadow overflow-hidden sm:rounded-md">
           <ul className="divide-y divide-gray-200">
-            {filteredInfluencers.map((influencer) => (
-              <li key={influencer.id}>
+            {filteredCreators.map((creator) => (
+              <li key={creator.id}>
                 <div className="px-4 py-4 sm:px-6">
                   <div className="flex items-center justify-between">
-                    <p className="text-sm font-medium text-blue-600 truncate">{influencer.name}</p>
+                    <p className="text-sm font-medium text-blue-600 truncate">{creator.name}</p>
                     <div className="ml-2 flex-shrink-0 flex">
                       <p className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                        {influencer.followers.toLocaleString()} followers
+                        {creator.followers.toLocaleString()} seguidores
                       </p>
                     </div>
                   </div>
                   <div className="mt-2 sm:flex sm:justify-between">
                     <div className="sm:flex">
                       <p className="flex items-center text-sm text-gray-500">
-                        {influencer.category}
+                        {creator.category}
                       </p>
                     </div>
                     <div className="mt-2 flex items-center text-sm text-gray-500 sm:mt-0">
-                      <p>{influencer.location}</p>
+                      <p>{creator.location}</p>
                     </div>
                   </div>
                 </div>
